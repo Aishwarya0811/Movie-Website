@@ -1,27 +1,52 @@
-import media
+"""Stores details of movies and displays them on a website."""
 import fresh_tomatoes
+import media
 
-toy_story = media.Movie(" Toy Story",
-                        " A story of a boy and his toys",
-                        r"C:\Users\HP\Desktop\Python Project-2\Toy Story.jpg",
-                          "https://www.youtube.com/watch?v=KYz2wyBy3kc")
-Avatar = media.Movie(" Avatar",
-                     "A marine on an alien Planet",
-                     r"C:\Users\HP\Desktop\Python Project-2\Avatar.jpg",
-                       "https://www.youtube.com/watch?v=5PSNL1qE6VY")
-SchoolofRock = media.Movie(" School Of Rock",
-                           " Using Rock Music to Learn",
-                           r"C:\Users\HP\Desktop\Python Project-2\School Of Rock.jpg",
-                             "https://www.youtube.com/watch?v=XCwy6lW5Ixc")
-Ratatouille = media.Movie(" Ratatouille"," A rat is a chef in Paris",
-                          r"C:\Users\HP\Desktop\Python Project-2\Ratatouille.jpg",
-                            "https://www.youtube.com/watch?v=c3sBBRxDAqk")
-MidnightinParis = media.Movie(" MidnightinParis"," Going back in time to meet authors",
-                              r"C:\Users\HP\Desktop\Python Project-2\midnight-in-paris.jpg",
-                                "https://www.youtube.com/watch?v=FAfR8omt-CY")
-TheHungerGames = media.Movie("The Hunger Games","Can she defeat professionals in order to survive the game? ",
-                             r"C:\Users\HP\Desktop\Python Project-2\The Hunger Games.jpg",
-                               "https://www.youtube.com/watch?v=mfmrPu43DF8")
+def main():
+    """Creates six Movie objects, initialising these objects with title, storyline,
+    poster image link, video trailer link."""
+    martian = media.Movie("The Martian",
+                          "A man is stuck on Mars",
+                          "https://upload.wikimedia.org/wikipedia/en/c/cd/"
+                          "The_Martian_film_poster.jpg",
+                          "https://www.youtube.com/watch?v=lQqhfq87FgY")
+                          
 
-movies = [toy_story, Avatar, SchoolofRock, Ratatouille, MidnightinParis, TheHungerGames]
-fresh_tomatoes.open_movies_page(movies)
+    contact = media.Movie("Contact",
+                          "We make contact with aliens",
+                          "https://upload.wikimedia.org/wikipedia/en/7/75/Contact_ver2.jpg",
+                          "https://www.youtube.com/watch?v=d9C2cF3KvP8")
+                          
+
+    res_evil = media.Movie("Resident Evil",
+                           "Zombie-causing virus escapes from the lab",
+                           "https://upload.wikimedia.org/wikipedia/en/a/a1/Resident_evil_ver4.jpg",
+                           "https://www.youtube.com/watch?v=u6uDnd_v5Bw")
+                          
+
+    matrix = media.Movie("The Matrix",
+                         "The world is a simulation",
+                         "https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg",
+                         "https://www.youtube.com/watch?v=vKQi3bBA1y8")
+                        
+
+    the_dish = media.Movie("The Dish",
+                           "A film about a radio telescope",
+                           "https://upload.wikimedia.org/wikipedia/en/4/4a/Thedish_poster.jpg",
+                           "https://www.youtube.com/watch?v=2TAqXENo1rA")
+                           
+
+    spectre = media.Movie("Spectre",
+                          "The latest James Bond movie",
+                          "https://upload.wikimedia.org/wikipedia/en/c/c3/Spectre_poster.jpg",
+                          "https://www.youtube.com/watch?v=vBnGxAkdh_k")
+                          
+
+    # Store the Movie objects in a list.
+    movies = [martian, contact, res_evil, matrix, the_dish, spectre]
+
+    # Open the movie website in the user's browser, featuring the movies above.
+    fresh_tomatoes.open_movies_page(movies)
+
+if __name__ == '__main__':
+    main()
