@@ -3,7 +3,7 @@ import fresh_tomatoes
 import media
 
 def main():
-    """Creates six Movie objects, initialising these objects with title, storyline,
+    """Creates five Movie objects, initialising these objects with title, storyline,
     poster image link, video trailer link."""
     martian = media.Movie("The Martian",
                           "A man is stuck on Mars",
